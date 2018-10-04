@@ -5,15 +5,15 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Libreria_Web", "Libreria_Web\Libreria_Web.csproj", "{30B183CF-A784-44CA-8CE2-1485E7518AE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "..\Clase 6\EjemploEF\Negocio\Negocio.csproj", "{A78E0ABC-C32E-41D6-915D-B040BA7355FB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datos", "..\Clase 6\EjemploEF\Datos\Datos.csproj", "{602A9E9B-589E-457D-A83A-8F98B0BC7E2A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionPrueba.Services", "..\Clase 5 (Contract,Access y services)\GonzaloPerez23-aplicaciondeprueba-bda9a38b525f\AplicacionPrueba.Services\AplicacionPrueba.Services.csproj", "{C5B48037-3670-47AC-8754-D53F0DDC4BF2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionPrueba.DataAccess", "..\Clase 5 (Contract,Access y services)\GonzaloPerez23-aplicaciondeprueba-bda9a38b525f\AplicacionPrueba.DataAccess\AplicacionPrueba.DataAccess.csproj", "{032940C9-D9DF-4490-9DFA-B63894B97802}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AplicacionPrueba.Contract", "..\Clase 5 (Contract,Access y services)\GonzaloPerez23-aplicaciondeprueba-bda9a38b525f\AplicacionPrueba.Contract\AplicacionPrueba.Contract.csproj", "{1A661013-6640-46C0-9E4E-22D529DF59C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Negocio", "Negocio\Negocio.csproj", "{065D9BDF-B4ED-4280-A50D-C89B765FA06E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{25711932-ACBE-45DF-A21D-4686F0044E5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +25,6 @@ Global
 		{30B183CF-A784-44CA-8CE2-1485E7518AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30B183CF-A784-44CA-8CE2-1485E7518AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30B183CF-A784-44CA-8CE2-1485E7518AE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A78E0ABC-C32E-41D6-915D-B040BA7355FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A78E0ABC-C32E-41D6-915D-B040BA7355FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A78E0ABC-C32E-41D6-915D-B040BA7355FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A78E0ABC-C32E-41D6-915D-B040BA7355FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{602A9E9B-589E-457D-A83A-8F98B0BC7E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{602A9E9B-589E-457D-A83A-8F98B0BC7E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{602A9E9B-589E-457D-A83A-8F98B0BC7E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{602A9E9B-589E-457D-A83A-8F98B0BC7E2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C5B48037-3670-47AC-8754-D53F0DDC4BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C5B48037-3670-47AC-8754-D53F0DDC4BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5B48037-3670-47AC-8754-D53F0DDC4BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +37,14 @@ Global
 		{1A661013-6640-46C0-9E4E-22D529DF59C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A661013-6640-46C0-9E4E-22D529DF59C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A661013-6640-46C0-9E4E-22D529DF59C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{065D9BDF-B4ED-4280-A50D-C89B765FA06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{065D9BDF-B4ED-4280-A50D-C89B765FA06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{065D9BDF-B4ED-4280-A50D-C89B765FA06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{065D9BDF-B4ED-4280-A50D-C89B765FA06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25711932-ACBE-45DF-A21D-4686F0044E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25711932-ACBE-45DF-A21D-4686F0044E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25711932-ACBE-45DF-A21D-4686F0044E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25711932-ACBE-45DF-A21D-4686F0044E5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

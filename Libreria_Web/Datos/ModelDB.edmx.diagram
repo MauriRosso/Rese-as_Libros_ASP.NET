@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81d954d331f343e4aa4da6af11bc3b38" Name="Diagram1">
+        <EntityTypeShape EntityType="LibreriaDBModel.Categorias" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibreriaDBModel.Comentarios" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibreriaDBModel.Publicaciones" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LibreriaDBModel.Usuarios" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="LibreriaDBModel.FK_Publicaciones_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="LibreriaDBModel.FK_Comentarios_Publicaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="LibreriaDBModel.FK_Publicaciones_Publicaciones" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

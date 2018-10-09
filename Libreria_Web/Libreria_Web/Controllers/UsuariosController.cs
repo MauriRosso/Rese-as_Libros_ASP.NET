@@ -1,4 +1,5 @@
 ﻿using System;
+using Negocio;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,14 @@ namespace Libreria_Web.Controllers
 {
     public class UsuariosController : Controller
     {
+        private ConsultasUsuarios ConsultasUsu = new ConsultasUsuarios();
         // GET: Usuarios
-        public ActionResult Index()
+        public ActionResult ObtenerUsuarios()
         {
-            return View();
+            var model = ConsultasUsu.ObtenerUsuarios();
+
+            return View(model);
         }
+
     }
 }

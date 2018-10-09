@@ -23,14 +23,22 @@ namespace Libreria_Web
                         "~/Content/vendor/jquery/jquery.min.js", 
                         "~/Content/vendor/bootstrap/js/bootstrap.bundle.min.js",
                         "~/Content/vendor/jquery-easing/jquery.easing.min.js", 
-                        "~/Content/js/stylish-portfolio.min.js"));
+                        "~/Content/js/stylish-portfolio.min.js",
+                        "~/Content/vendor/chart.js/Chart.min.js",
+                        "~/Content/vendor/datatables/jquery.dataTables.js",
+                        "~/Content/vendor/datatables/dataTables.bootstrap4.js",
+                        "~/Content/js/sb-admin.min.js",
+                        "~/Content/js/demo/datatables-demo.js",
+                        "~/Content/js/demo/chart-area-demo.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                         "~/Content/vendor/bootstrap/css/bootstrap.min.css",
                         "~/Content/vendor/fontawesome-free/css/all.min.css",
                         "~/Content/vendor/simple-line-icons/css/simple-line-icons.css",
                         "~/Content/css/stylish-portfolio.min.css",
-                        "~/Content/css/NavBar.css")); 
+                        "~/Content/css/NavBar.css",
+                        "~/Content/vendor/datatables/dataTables.bootstrap4.css",
+                        "~/Content/css/sb-admin.css"));
         }
     }
 }

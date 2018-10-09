@@ -1,62 +1,44 @@
-body,
+// Global styling for this template
+
 html {
-  width: 100%;
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body {
-  @include body-font;
+  height: 100%;
 }
 
-// Custom Button Size
-.btn-xl {
-  padding: 1.25rem 2.5rem;
-}
-
-// Content Section
-.content-section {
-  padding-top: 7.5rem;
-  padding-bottom: 7.5rem;
-}
-
-.content-section-heading {
-  h2 {
-    font-size: 3rem;
-  }
-  h3 {
-    font-size: 1rem;
-    text-transform: uppercase;
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: $sticky-footer-height;
   }
 }
-
-// Typography
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-}
-
-.text-faded {
-  color: fade-out($white, 0.3);
-}
-
-/* Map */
-
-.map {
-  height: 30rem;
-}
-
-@media(max-width: 992px) {
-  .map {
-    height: 75%;
+// Fixed Nav Option
+body.fixed-nav {
+  #content-wrapper {
+    margin-top: $navbar-base-height;
+    padding-left: $sidebar-collapsed-width;
   }
-}
-
-.map iframe {
-  pointer-events: none;
+  &.sidebar-toggled {
+    #content-wrapper {
+      padding-left: 0;
+    }
+  }
+  @media(min-width: 768px) {
+    #content-wrapper {
+      padding-left: $sidebar-base-width;
+    }
+    &.sidebar-toggled {
+      #content-wrapper {
+        padding-left: $sidebar-collapsed-width;
+      }
+    }
+  }
 }
 
 // Scroll to top button
@@ -64,18 +46,13 @@ h6 {
   position: fixed;
   right: 15px;
   bottom: 15px;
-
   display: none;
-
   width: 50px;
   height: 50px;
-
   text-align: center;
-
-  color: white;
+  color: $white;
   background: fade-out($gray-800, .5);
-
-  line-height: 45px;
+  line-height: 46px;
   &:focus,
   &:hover {
     color: white;

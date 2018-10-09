@@ -12,23 +12,18 @@ namespace Datos
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuarios
+    public partial class AspNetRoles
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuarios()
+        public AspNetRoles()
         {
-            this.Publicaciones = new HashSet<Publicaciones>();
+            this.AspNetUsers = new HashSet<AspNetUsers>();
         }
     
-        public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
-        public string Email { get; set; }
-        public int Contrasena { get; set; }
-        public System.DateTime Fecha_Registro { get; set; }
-        public string Activo { get; set; }
-        public string Rol { get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Publicaciones> Publicaciones { get; set; }
+        public virtual ICollection<AspNetUsers> AspNetUsers { get; set; }
     }
 }

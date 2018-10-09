@@ -148,7 +148,6 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\roslyn\VBCSCompiler.exe
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Antlr3.Runtime.dll
-C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\EntityFramework.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\EntityFramework.SqlServer.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Microsoft.AI.Agent.Intercept.dll
@@ -184,8 +183,6 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\System.Web.WebPages.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\System.Web.WebPages.Razor.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\WebGrease.dll
-C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.pdb
-C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.dll.config
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\System.Web.Helpers.xml
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\System.Web.Mvc.xml
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\System.Web.Optimization.xml
@@ -239,3 +236,11 @@ C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\obj\Debug\Libreria_Web.csproj.CopyComplete
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\obj\Debug\Libreria_Web.dll
 C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\obj\Debug\Libreria_Web.pdb
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Negocio.dll
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Negocio.pdb
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Negocio.dll.config
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.dll
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.pdb
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\bin\Datos.dll.config
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\obj\Debug\Libreria_Web.Migrations.Agrear_Campos_Adicionales.resources
+C:\Users\mauri\Desktop\MAURI\UNIVERSIDAD\zz Curso ASP.NET MVC\Resenas_Libros_ASP.NET\Libreria_Web\Libreria_Web\obj\Debug\Libreria_Web.csproj.GenerateResource.cache

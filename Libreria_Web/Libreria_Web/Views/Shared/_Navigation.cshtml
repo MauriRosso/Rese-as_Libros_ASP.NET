@@ -37,8 +37,9 @@
                 <br />
                 <br />
                 <li class="sidebar-nav-item">
-                    @* Cambiar. Quiero que se muestre en la pantalla de inicio*@
-                    @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    @* Preguntar si es admin llevarlo al ManageAdmin, de lo contrario al Manage*@
+                    @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "IndexAdmin", "ManageAdmin", routeValues: null, htmlAttributes: new { title = "ManageAdmin" })
+                    @*@Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
                 </li>
                 <li class="sidebar-nav-item">
                     <a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>

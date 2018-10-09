@@ -3,12 +3,19 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using System.ComponentModel.DataAnnotations;
 
 namespace Libreria_Web.Models
 {
     // Para agregar datos de perfil del usuario, agregue más propiedades a su clase ApplicationUser. Visite https://go.microsoft.com/fwlink/?LinkID=317594 para obtener más información.
     public class ApplicationUser : IdentityUser
     {
+        //CREAR TODAS LAS COLUMNAS QUE QUIERAS AGREGAR AQUI!!//
+        public bool Activo { get; set; }
+        [StringLength(256)]
+        public string Alias { get; set; }
+        public System.DateTime FechaRegistro { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Tenga en cuenta que el valor de authenticationType debe coincidir con el definido en CookieAuthenticationOptions.AuthenticationType
@@ -29,5 +36,6 @@ namespace Libreria_Web.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }

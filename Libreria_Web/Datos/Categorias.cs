@@ -23,7 +23,7 @@ namespace Datos
         public int IdCategoria { get; set; }
         public string Nombre { get; set; }
         public int Visitas { get; set; }
-        public string Activa { get; set; }
+        public bool Activa { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Publicaciones> Publicaciones { get; set; }

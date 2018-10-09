@@ -15,13 +15,12 @@ namespace Datos
     public partial class Comentarios
     {
         public int IdComentario { get; set; }
-        public int IdUsuario { get; set; }
         public string Descripcion { get; set; }
-        public int IdPublicacion { get; set; }
         public System.DateTime Fecha_Comentario { get; set; }
-        public string Activo { get; set; }
+        public bool Activo { get; set; }
         public int MeGusta { get; set; }
     
+        public virtual AspNetUsers AspNetUsers { get; set; }
         public virtual Publicaciones Publicaciones { get; set; }
     }
 }

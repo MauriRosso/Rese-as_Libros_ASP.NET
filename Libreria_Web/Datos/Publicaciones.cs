@@ -23,15 +23,13 @@ namespace Datos
         public int IdPublicacion { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public int IdCategoria { get; set; }
         public System.DateTime Fecha_Publicacion { get; set; }
-        public string Activa { get; set; }
-        public int IdUsuario { get; set; }
+        public bool Activa { get; set; }
         public int MeGusta { get; set; }
     
+        public virtual AspNetUsers AspNetUsers { get; set; }
         public virtual Categorias Categorias { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Comentarios> Comentarios { get; set; }
-        public virtual Usuarios Usuarios { get; set; }
     }
 }

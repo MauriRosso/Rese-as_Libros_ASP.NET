@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Negocio.Usuario>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ObtenerUsuarios</title>
+</head>
+<body>
+    <div>
+        <h4>Usuario</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.Email</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EmailConfirmed)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.EmailConfirmed</label>
+                    }
+                }
+            </dd>     
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.PhoneNumber</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.PhoneNumberConfirmed</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.UserName)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.UserName</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Activo)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.Activo</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Alias)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.Alias</label>
+                    }
+                }
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </dt>
+    
+            <dd>
+                @{
+                    foreach (var item in Model)
+                    {
+                        <label>@item.FechaRegistro</label>
+                    }
+                }
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit") |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

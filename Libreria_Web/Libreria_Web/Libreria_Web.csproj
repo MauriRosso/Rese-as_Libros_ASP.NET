@@ -196,11 +196,17 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageAdminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810080620272_Agrear_Campos_Adicionales.cs" />
+    <Compile Include="Migrations\201810080620272_Agrear_Campos_Adicionales.Designer.cs">
+      <DependentUpon>201810080620272_Agrear_Campos_Adicionales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -210,15 +216,22 @@
   <ItemGroup>
     <Content Include="Content\css\blog-home.css" />
     <Content Include="Content\css\NavBar.css" />
+    <Content Include="Content\css\sb-admin.css" />
+    <Content Include="Content\css\sb-admin.min.css" />
     <Content Include="Content\css\stylish-portfolio.css" />
     <Content Include="Content\css\stylish-portfolio.min.css" />
-    <Content Include="Content\css\zEstilosFINAL.css" />
     <Content Include="Content\img\bg-callout.jpg" />
     <Content Include="Content\img\bg-masthead.jpg" />
     <Content Include="Content\img\portfolio-1.jpg" />
     <Content Include="Content\img\portfolio-2.jpg" />
     <Content Include="Content\img\portfolio-3.jpg" />
     <Content Include="Content\img\portfolio-4.jpg" />
+    <Content Include="Content\js\demo\chart-area-demo.js" />
+    <Content Include="Content\js\demo\chart-bar-demo.js" />
+    <Content Include="Content\js\demo\chart-pie-demo.js" />
+    <Content Include="Content\js\demo\datatables-demo.js" />
+    <Content Include="Content\js\sb-admin.js" />
+    <Content Include="Content\js\sb-admin.min.js" />
     <Content Include="Content\js\stylish-portfolio.js" />
     <Content Include="Content\js\stylish-portfolio.min.js" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
@@ -231,6 +244,16 @@
     <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
     <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="Content\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="Content\vendor\chart.js\Chart.js" />
+    <Content Include="Content\vendor\chart.js\Chart.min.js" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\vendor\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="Content\vendor\datatables\jquery.dataTables.min.js" />
     <Content Include="Content\vendor\fontawesome-free\css\all.css" />
     <Content Include="Content\vendor\fontawesome-free\css\all.min.css" />
     <Content Include="Content\vendor\fontawesome-free\css\brands.css" />
@@ -1698,7 +1721,9 @@
     <Content Include="Content\vendor\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
     <Content Include="Content\vendor\simple-line-icons\less\simple-line-icons.less" />
     <Content Include="Content\vendor\simple-line-icons\scss\simple-line-icons.scss" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -1743,16 +1768,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\scss\sb-admin.scss" />
+    <Content Include="Content\scss\_utilities.scss" />
     <None Include="packages.config" />
     <Content Include="Views\Home\IndexBefore.cshtml" />
     <Content Include="Views\Shared\_NavigationIndexBefore.cshtml" />
-    <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Usuarios\ObtenerUsuarios.cshtml" />
+    <Content Include="Views\ManageAdmin\IndexAdmin.cshtml" />
+    <Content Include="Views\ManageAdmin\GraficosAdmin.cshtml" />
+    <Content Include="Views\ManageAdmin\TablasAdmin.cshtml" />
+    <Content Include="Views\Shared\_SidebarAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{25711932-acbe-45df-a21d-4686f0044e5a}</Project>
-      <Name>Datos</Name>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{065d9bdf-b4ed-4280-a50d-c89b765fa06e}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810080620272_Agrear_Campos_Adicionales.resx">
+      <DependentUpon>201810080620272_Agrear_Campos_Adicionales.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

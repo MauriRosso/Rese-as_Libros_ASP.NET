@@ -1,5 +1,5 @@
-﻿using System;
-using Datos;
+﻿using Datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +7,32 @@ using System.Threading.Tasks;
 
 namespace Negocio
 {
-    class ConsultasUsuarios
+    public class ConsultasUsuarios
     {
-        public List<Usuarios> ObtenerUsuarios()
+        public List<Usuario> ObtenerUsuarios()
         {
             LibreriaDBEntities contexto = new LibreriaDBEntities();
-            var usuarios = contexto.Usuarios.Where(x => x.Activo == "true"); //Cambiar BD y poner bool
-            List<Usuarios> resultado = new List<Usuarios>();
+            var usuarios = contexto.AspNetUsers.Where(x => x.Activo == true);
+            List<Usuario> resultado = new List<Usuario>();
             foreach (var item in usuarios.ToList())
             {
-                resultado.Add(new Usuarios()
+                resultado.Add(new Usuario()
                 {
-                    IdUsuario = item.IdUsuario,
-                    //TipoCliente = item.IdTipoCliente.HasValue ? item.TiposClientes.Nombre : "",
-                    Nombre = item.Nombre,
+                    Id = item.Id,
                     Email = item.Email,
-                    Contrasena = item.Contrasena,
-                    Fecha_Registro = item.Fecha_Registro,
+                    EmailConfirmed = item.EmailConfirmed,
+                    PasswordHash = item.PasswordHash,
+                    SecurityStamp = item.SecurityStamp,
+                    PhoneNumber = item.PhoneNumber,
+                    PhoneNumberConfirmed = item.PhoneNumberConfirmed,
+                    TwoFactorEnabled = item.TwoFactorEnabled,
+                    LockoutEndDateUtc = item.LockoutEndDateUtc,
+                    LockoutEnabled = item.LockoutEnabled,
+                    AccessFailedCount = item.AccessFailedCount,
+                    UserName = item.UserName,
                     Activo = item.Activo,
-                    Rol = item.Rol,
-                    Publicaciones = item.Publicaciones 
+                    Alias = item.Alias,
+                    FechaRegistro = item.FechaRegistro
                 });
             }
 
@@ -34,3 +40,5 @@ namespace Negocio
         }
     }
 }
+
+//TipoCliente = item.IdTipoCliente.HasValue ? item.TiposClientes.Nombre : "", --> Usar para campos nulleables.

@@ -1,0 +1,58 @@
+﻿@model Negocio.Publicacion
+
+<h3>¿Está seguro que desea borrar esta publicación?</h3>
+<div>
+    <h4>Publicaciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Publicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Publicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Activa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Activa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Id)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la lista", "Index")
+        </div>
+    }
+</div>

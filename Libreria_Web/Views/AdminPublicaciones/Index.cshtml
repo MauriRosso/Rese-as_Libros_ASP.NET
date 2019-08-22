@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Negocio.Publicacion>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Administrador - Publicaciones</title>
+
+</head>
+
+<body id="page-top">
+
+    @*<button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+          <i class="fas fa-bars"></i>
+        </button>*@
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        @Html.Partial("_SidebarAdmin")
+
+        <div id="content-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item active">Publicaciones</li>
+                </ol>
+
+                <!-- Tabla Categorias -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <i class="fas fa-table"></i>
+                        Tabla Publicaciones
+                    </div>
+                    <div class="card-body">
+                        @Html.ActionLink("Agregar Publicación", "Create")
+                        <hr />
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Id publicación</th>
+                                        <th>Descripción</th>
+                                        <th>Fecha creación</th>
+                                        <th>Categoría</th>
+                                        <th>Activa</th>
+                                        <th><b>Acción</b></th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Id publicación</th>
+                                        <th>Descripción</th>
+                                        <th>Fecha creación</th>
+                                        <th>Categoría</th>
+                                        <th>Activa</th>
+                                        <th><b>Acción</b></th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    @{
+                                        foreach (var item in Model)
+                                        {
+                                    <tr>
+                                        <td>@item.Nombre</td>
+                                        <td>@item.Id</td>
+                                        <td>@item.Descripcion</td>
+                                        <td>@item.Fecha_Publicacion</td>
+                                        <td>@item.IdCategoria</td>
+                                        <td>@item.Activa</td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                                        </td>
+                                    </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-footer small text-muted">Última consulta: @DateTime.Now</div>
+                </div>
+
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+</body>

@@ -1,0 +1,81 @@
+﻿@model Negocio.Publicacion
+
+<body>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+                <!-- Title -->
+                <h1 class="mt-4">@Model.Nombre</h1>
+                <!-- Author -->
+                <p class="lead">
+                    por
+                    <a href="#">Mauricio Rosso</a>  @*Que vaya a mi tarjeta de perfil*@
+                </p>
+                <hr>
+                <!-- Date/Time -->
+                <p>Publicado el @Model.Fecha_Publicacion a las @Model.Fecha_Publicacion.Hour horas.</p>
+                <hr>
+                <!-- Preview Image -->
+                <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+                <hr>
+                <!-- Post Content -->
+                <p>
+                    @Model.Descripcion
+                </p>
+               <hr>
+
+                <!-- Formulario de comentar -->
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="card my-4">
+                        <h5 class="card-header">Dejanos tu comentario:</h5>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Comentar</button>
+                            </form>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <h2>¡Debes estar logueado para comentar!</h2>
+                    @Html.ActionLink("Iniciar Sesión", "Login", "Account")
+                }
+                <!-- Comentarios -->
+                @foreach (var item in Model.Comentarios.Where(x => x.Activo == true))
+                {
+
+                    <div class="media mb-4">
+                        <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                        <div class="media-body">
+                            <h5 class="mt-0">@item.AspNetUsers.UserName - <small>@item.Fecha_Comentario</small></h5>
+                            @item.Descripcion
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                foreach (var Usu in Model.Comentarios)
+                                {
+                                    @*Hacer con popUps*@
+                                    if (User.Identity.Name == Usu.AspNetUsers.UserName)
+                                    {
+                                        <a class="btn btn-group" id="BtnEliminar" type="submit" href="@Url.Action("DeleteComment","Publicacion",new { Id = item.Id })">Eliminar</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-group" id="BtnDenunciar" type="submit" href="@Url.Action("Create","Denuncias",new { Id = item.Id })">Denunciar</a>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</body>
